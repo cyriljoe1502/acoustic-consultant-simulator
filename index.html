@@ -6,6 +6,13 @@
   <meta name="description" content="Acoustic Consultant Simulator - a fictional noise and vibration training game.">
   <title>Acoustic Consultant Simulator V7</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+
+<meta name="theme-color" content="#06111f">
+
+<link rel="icon" type="image/png" href="icon-192.png">
+
+<link rel="apple-touch-icon" href="icon-192.png">
 </head>
 <body>
 <header class="topbar">
@@ -16,5 +23,50 @@
 <footer><p>Fictional training game. Illustrative criteria only. Not a substitute for standards, project requirements or professional judgement.</p></footer>
 <script src="questions.js"></script>
 <script src="game.js"></script>
+
+
+<script>
+
+    if ("serviceWorker" in navigator) {
+
+        window.addEventListener(
+            "load",
+            function () {
+
+                navigator.serviceWorker
+                    .register(
+                        "./service-worker.js"
+                    )
+
+                    .then(
+                        function (registration) {
+
+                            console.log(
+                                "Service Worker registered:",
+                                registration.scope
+                            );
+
+                        }
+                    )
+
+                    .catch(
+                        function (error) {
+
+                            console.error(
+                                "Service Worker registration failed:",
+                                error
+                            );
+
+                        }
+                    );
+
+            }
+        );
+
+    }
+
+</script>
+
+
 </body>
 </html>
