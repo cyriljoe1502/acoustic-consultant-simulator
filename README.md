@@ -1,19 +1,24 @@
-## Acoustic Consultant Simulator v8.6
+### Acoustic Consultant Simulator v8.7
 
-### Changes
-- Improved mobile top navigation spacing and moved the hamburger menu slightly to the right.
-- Fixed the mobile career progression track so the connecting line remains visible across the full pathway.
-- Corrected spacing between **Save profile** and **Return to main screen** on the Profile page, including full-width mobile buttons.
-- Retains the complete v8.5 career, achievements, scoring, branding, animations and PWA functionality.
-- Cache updated to acs-v8-6.
+#### Changes
+- Rewritten all 48 questions across four disciplines and four career levels.
+- Balanced answer lengths so the correct option is not identifiable by detail or wording.
+- Added realistic distractors based on common consultancy errors.
+- Increased calculations, uncertainty, context and professional judgement at every level.
+- Randomises both question order and answer order whenever a module starts.
+- Retains v8.6 career progression, achievements, scoring, mobile layout, branding and saved progress.
+- Updated PWA cache to `acs-v8-7`, with immediate service-worker activation.
 
-### Publish to GitHub
+#### Publish to GitHub
 Replace all files in the repository root with the files in this pack, then run:
 
-```text
+```bash
 git add .
-git commit -m "Fix mobile navigation and layout spacing"
+git commit -m "Release v8.7 question difficulty update"
 git push origin main
 ```
 
-If an installed PWA still shows the old build, close and reopen it after GitHub Pages finishes deploying. If necessary, remove and reinstall the PWA to clear the older cached build.
+If the installed PWA still shows v8.6 after GitHub Pages deploys, close and reopen it. If required, clear the site's cached data or remove and reinstall the PWA once.
+
+#### Important
+This app is for training. Users should check current standards, guidance and project-specific requirements before using any answer professionally.
