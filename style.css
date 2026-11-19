@@ -7,3 +7,18 @@
 
 /* v8.5 landing headline motion */
 .brand:hover img{transform:translateY(-1px);box-shadow:0 7px 22px #56e1cb22}.brand img{transition:transform .22s ease,box-shadow .22s ease}.welcome h1{animation:headline-settle .8s cubic-bezier(.2,.7,.2,1) both}.welcome h1 span{display:inline-block;background:linear-gradient(100deg,#56e1cb 0%,#74d3f5 42%,#56e1cb 75%);background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:headline-shimmer 7s ease-in-out 1s infinite}.welcome h1 span::after{content:'';display:block;width:34%;height:2px;margin:12px auto 0;border-radius:5px;background:linear-gradient(90deg,transparent,#56e1cb88,transparent);animation:headline-line 5s ease-in-out infinite}@keyframes headline-settle{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}@keyframes headline-shimmer{0%,25%,100%{background-position:100% 50%}55%,70%{background-position:0 50%}}@keyframes headline-line{0%,100%{opacity:.25;transform:scaleX(.7)}50%{opacity:.8;transform:scaleX(1)}}@media(prefers-reduced-motion:reduce){.welcome h1,.welcome h1 span,.welcome h1 span::after{animation:none!important}}
+
+/* v8.6 mobile layout fixes */
+.profile-actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin:18px 0}
+@media(max-width:720px){
+  header{padding-left:4vw;padding-right:3vw;gap:10px}
+  #levelPill{margin-left:auto}
+  #menu{flex:0 0 auto;margin-left:2px;padding:9px 4px 9px 10px;min-width:34px;text-align:right}
+  .career-progress{overflow:visible;padding-left:0;padding-right:0}
+  .career-stages{min-width:0;gap:2px}
+  .career-track{left:12.5%;right:12.5%;top:43px;overflow:visible;z-index:0}
+  .career-fill{position:relative;z-index:1;min-width:0}
+  .career-stage{position:relative;z-index:2}
+  .profile-actions{display:grid;grid-template-columns:1fr;gap:12px;margin:18px 0}
+  .profile-actions .primary,.profile-actions .secondary{width:100%;margin:0}
+}
